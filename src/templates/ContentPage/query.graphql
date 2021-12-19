@@ -1,0 +1,11 @@
+#import "../../fragments/BasePageFields.graphql"
+
+query ReadOneContentPage($link: String!, $stage: VersionedQueryMode) {
+  readOneContentPage(link: $link, versioning: { mode: $stage }) {
+    ...BasePageFields
+    
+	tagline
+
+
+  }
+}
